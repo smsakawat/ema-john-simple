@@ -1,12 +1,13 @@
 .cart {
-  width: 85%;
+  width: 280px;
   height: 270px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   margin-top: 10px;
-  margin-left: 10px;
-  padding-left: 12px;
+  margin-left: 30px;
+  padding-left: 15px;
   padding-top: 5px;
+  position: fixed;
 }
 .cart-title {
   text-align: center;
@@ -23,4 +24,7 @@
   font-weight: 600;
   color: brown;
   margin-top: 25px;
+}
+.cart td {
+  padding-right: 10px;
 }

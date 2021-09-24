@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb } from '../../utilities/localDb';
+import { addToDb, getStoredData } from '../../utilities/localDb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Showcase .css';
@@ -23,6 +23,24 @@ const Showcase = () => {
 
 
     }
+    // load data from local storage
+    useEffect(() => {
+        console.log('local-storage called')
+        const storedData = getStoredData()
+        // declar an array for storing selected items,we can use push or pop here because this normal array but we can't use this methods in state-array to set a state
+        const selectedCarts = [];
+
+
+        if (products.length) {
+            for (const key in storedData) {
+                const item = products.find(product => product.key === key);
+                selectedCarts.push(item);
+
+
+            }
+            setCart(selectedCarts);
+        }
+    }, [products])
 
 
     return (

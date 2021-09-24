@@ -18,7 +18,13 @@ export const addToDb = (id) => {
     updateDb(shoppingCart)
 }
 
-// collect data form loca storage
+// get stored date from local storage
+export const getStoredData = () => {
+    const data = localStorage.getItem('Cart_data');
+    return data ? JSON.parse(data) : {};
+}
+
+// collect data form local storage
 const getDb = () => {
     const localData = localStorage.getItem('Cart_data');
     return localData;
