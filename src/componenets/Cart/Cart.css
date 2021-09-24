@@ -1,0 +1,16 @@
+.cart {
+  width: 85%;
+  height: 330px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-left: 12px;
+  padding-top: 5px;
+}
+.cart-title {
+  text-align: center;
+}
+.icon {
+  margin-right: 4px;
+}

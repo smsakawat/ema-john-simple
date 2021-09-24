@@ -1,0 +1,9 @@
+.showcase-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.products-container {
+  border-right: 1px solid rgb(209, 207, 207);
+  margin-right: 8px;
+  margin-left: 10%;
+}

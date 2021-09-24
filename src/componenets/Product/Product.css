@@ -1,0 +1,24 @@
+.single-product {
+  display: flex;
+  justify-content: cen;
+  align-items: center;
+  border-bottom: 1px solid rgb(209, 207, 207);
+  margin-right: 5px;
+  padding-bottom: 5px;
+}
+.product-img {
+  margin-right: 30px;
+}
+.purchase-btn {
+  width: 175px;
+  background-image: linear-gradient(#fcc63d, #ffdf8f);
+
+  border: 1px solid rgb(153, 153, 156);
+  border-radius: 4px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.product-name {
+  font-weight: 600;
+  color: rgb(29, 23, 71);
+}
