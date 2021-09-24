@@ -1,6 +1,6 @@
 .cart {
   width: 85%;
-  height: 330px;
+  height: 270px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   margin-top: 10px;
@@ -13,4 +13,14 @@
 }
 .icon {
   margin-right: 4px;
+}
+.table {
+  text-align: start;
+  font-size: 14px;
+}
+.grand-total {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: brown;
+  margin-top: 25px;
 }

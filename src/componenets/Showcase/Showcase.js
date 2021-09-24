@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb } from '../../utilities/localDb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Showcase .css';
@@ -18,6 +19,7 @@ const Showcase = () => {
     const handleAddToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
+        addToDb(product.key);
 
 
     }
