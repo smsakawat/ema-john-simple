@@ -6,32 +6,48 @@ import './Cart.css';
 const Cart = (props) => {
 
     const { cart } = props;
+    console.log(cart)
 
-    const updateTotal = (previous, current) => {
-        return previous + current.price;
+    // const updateTotal = (previous, current) => {
+    //     return previous + current.price;
+    // }
+
+    // const totalPrice = (cart.reduce(updateTotal, 0)).toFixed(2);
+
+    let totalPrice = 0;
+    let totalQuantity = 0;
+
+    for (const product of cart) {
+
+        if (!product.quantity) {
+            product.quantity = 1;
+        }
+
+        totalQuantity = totalQuantity + product.quantity;
+        totalPrice = totalPrice + product.price * product.quantity;
+        // console.log(totalPrice, totalQuantity)
+
     }
 
 
-    const itemsPrice = (cart.reduce(updateTotal, 0)).toFixed(2);
 
-
-    const beforeTax = itemsPrice;
-    const shippingPrice = itemsPrice > 0 ? 15 : 0;
-    const tax = ((itemsPrice + shippingPrice) * 0.1).toFixed(2);
-    const grandTotal = (parseFloat(itemsPrice) + shippingPrice + parseFloat(tax)).toFixed(2);
+    const beforeTax = totalPrice;
+    const shippingPrice = totalPrice > 0 ? 15 : 0;
+    const tax = (totalPrice + shippingPrice) * 0.1;
+    const grandTotal = (totalPrice) + shippingPrice + (tax);
 
     return (
         <div className='cart'>
 
             <h3>Order Summary: </h3>
-            <p>Items Ordered: {cart.length} </p>
+            <p>Items Ordered: {totalQuantity} </p>
 
             <table className='table'>
                 <tbody>
                     <tr>
                         <td>Item Price:
                         </td>
-                        <td>${itemsPrice}</td>
+                        <td>${totalPrice.toFixed(2)}</td>
                     </tr>
                     <tr>
                         <td>Shipping: </td>
@@ -39,15 +55,15 @@ const Cart = (props) => {
                     </tr>
                     <tr>
                         <td>Total before tax:</td>
-                        <td>${beforeTax}</td>
+                        <td>${beforeTax.toFixed(2)}</td>
                     </tr>
                     <tr>
                         <td>Estimated tax:</td>
-                        <td>${tax}</td>
+                        <td>${tax.toFixed(2)}</td>
                     </tr>
                     <tr className='grand-total'>
                         <td>Order Total:</td>
-                        <td>${grandTotal}</td>
+                        <td>${grandTotal.toFixed(2)}</td>
                     </tr>
                 </tbody>
             </table>
