@@ -33,9 +33,8 @@ const Product = (props) => {
 
                     </Rating>
                 </div>
-                <button
-                    onClick={() => props.handleAddToCart(props.product)}
-                    className='purchase-btn'><span className='icon'>{icon}</span>add to cart</button>
+                <button onClick={() => props.handleAddToCart(props.product)}
+                    className='btn-regular'><span className='icon'>{icon}</span>add to cart</button>
             </div>
         </div>
     )

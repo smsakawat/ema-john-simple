@@ -6,7 +6,7 @@ import './Cart.css';
 const Cart = (props) => {
 
     const { cart } = props;
-    console.log(cart)
+
 
     // const updateTotal = (previous, current) => {
     //     return previous + current.price;
@@ -67,6 +67,9 @@ const Cart = (props) => {
                     </tr>
                 </tbody>
             </table>
+            <div>
+                {props.children}
+            </div>
 
 
         </div>

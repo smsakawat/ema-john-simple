@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { addToDb, getStoredData } from '../../utilities/localDb';
+import Button from '../Button/Button';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Showcase .css';
@@ -27,7 +30,7 @@ const Showcase = () => {
     // load data from local storage
     useEffect(() => {
 
-        const storedData = getStoredData()
+        const storedData = getStoredData();
 
         // declar an array for storing selected items,we can use push or pop here because it's a normal array but we can't use this methods in state-array to set a state
         const selectedCarts = [];
@@ -50,9 +53,22 @@ const Showcase = () => {
 
     // Event handler for Cart
     const handleAddToCart = (product) => {
-        const newCart = [...cart, product];
+        const exists = cart.find(pd => pd.key === product.key);
+        let newCart = [];
+        if (exists) {
+            const restProducts = cart.filter(pd => pd.key !== product.key);
+            exists.quantity = exists.quanity + 1;
+            newCart = [...restProducts, product];
+        }
+        else {
+            product.quantity = 1;
+            newCart = [...cart, product];
+        }
+
         setCart(newCart);
         addToDb(product.key);
+
+
 
     }
 
@@ -83,18 +99,25 @@ const Showcase = () => {
             </div>
             <div className='showcase-container'>
                 <div className="products-container">
-                    {
+                    {(!displayProducts) ? <Spinner animation="grow" variant="secondary" /> :
                         displayProducts.map(product => <Product
                             handleAddToCart={handleAddToCart}
                             key={product.key}
                             product={product}
                         ></Product>)
+
+
                     }
                 </div>
                 <div className="cart-container">
                     <Cart
+                        text='Review Order'
                         cart={cart}
-                    ></Cart>
+                    >
+                        <Link to='/order-review'>
+                            <Button text='Review Order'></Button>
+                        </Link>
+                    </Cart>
                 </div>
             </div>
         </div>
@@ -102,3 +125,6 @@ const Showcase = () => {
 }
 
 export default Showcase;
+
+// https://docs.google.com/document/d/1EBlS2g_QLrozKWN8fhYSjN9N1k0zYE5K-7zNZvDUAoQ/preview?pru=AAABfGWY61Y*D2bWzudjtsKoGmhUF8QOlg
+// https://thirsty-murdock-bba58f.netlify.app/details/133753

@@ -32,3 +32,15 @@ const getDb = () => {
 const updateDb = (cart) => {
     localStorage.setItem('Cart_data', JSON.stringify(cart));
 }
+
+export const removeItem = (key) => {
+    const savedData = getStoredData();
+    delete savedData[key];
+    updateDb(savedData);
+
+}
+// we can also export all funtions together..
+export const clearDb = () => {
+    localStorage.removeItem('Cart_data');
+}
+

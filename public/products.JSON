@@ -1,28 +1,40 @@
 [
   {
-    "key": "B002RL8IYK",
+    "key": "B01DBGVB7K",
     "category": "laptop",
-    "name": "3M Gold Privacy Filter for 17\" Widescreen Laptop (16:10) (GF170W1B)",
-    "seller": "3M",
-    "wholePrice": "68",
-    "priceFraction": "36",
-    "stock": 36,
-    "star": 3.5,
-    "starCount": 3245,
-    "img": "https://images-na.ssl-images-amazon.com/images/I/415oziPFA0L._AC_US218_.jpg",
-    "url": "https://www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_electronics_sr_pg1_1?ie=UTF8&adId=A03956601N6RBLKGAP4W1&url=https%3A%2F%2Fwww.amazon.com%2F3M-Privacy-Filter-Widescreen-Laptop%2Fdp%2FB002RL8IYK%2Fref%3Dsr_1_1%3Fs%3Delectronics%26ie%3DUTF8%26qid%3D1499124890%26sr%3D1-1-spons%26keywords%3Dlaptop%26psc%3D1&qualifier=1499124889&id=6267744216991374&widgetName=sp_atf",
+    "name": "ASUS Chromebook C202SA-YS02 11.6\" Ruggedized and Water Resistant Design with 180 Degree (Intel Celeron 4 GB, 16GB eMMC, Dark Blue)",
+    "seller": "Asus",
+    "wholePrice": 220,
+    "priceFraction": 49,
+    "stock": 54,
+    "star": 4.5,
+    "starCount": 2777,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/31inMpRxCFL._AC_US218_.jpg",
+    "url": "https://www.amazon.com/Chromebook-C202SA-YS02-Ruggedized-Resistant-Celeron/dp/B01DBGVB7K/ref=sr_1_6?s=electronics&ie=UTF8&qid=1499124890&sr=1-6&keywords=laptop",
     "features": [
       {
         "description": "Display Size",
-        "value": "17 inches"
+        "value": "11.6 inches"
       },
       {
-        "description": "Hardware Platform",
-        "value": "PC"
+        "description": "Computer Memory Size",
+        "value": "4 GB"
+      },
+      {
+        "description": "Operating System",
+        "value": "Chrome"
+      },
+      {
+        "description": "Hard Disk Size",
+        "value": "16 GB"
+      },
+      {
+        "description": "Cpu Model Family",
+        "value": "celeron"
       }
     ],
-    "price": 68.36,
-    "shipping": 7.99
+    "price": 220.49,
+    "shipping": 3.99
   },
   {
     "key": "B01LZ2WZGH",
@@ -40,43 +52,7 @@
     "price": 169.88,
     "shipping": 3.99
   },
-  {
-    "key": "B01K1IO3QW",
-    "category": "laptop",
-    "name": "Acer Aspire E 15 E5-575-33BM 15.6-Inch Full HD Notebook (Intel Core i3-7100U Processor 7th Generation , 4GB DDR4, 1TB 5400RPM Hard Drive, Intel HD Graphics 620, Windows 10 Home), Obsidian Black",
-    "seller": "Acer",
-    "wholePrice": "349",
-    "priceFraction": "99",
-    "stock": 3,
-    "star": 3.2,
-    "starCount": 3525,
-    "img": "https://images-na.ssl-images-amazon.com/images/I/41HfDkXXyeL._AC_US218_.jpg",
-    "url": "https://www.amazon.com/Acer-E5-575-33BM-15-6-Inch-Processor-Generation/dp/B01K1IO3QW/ref=sr_1_3?s=electronics&ie=UTF8&qid=1499124890&sr=1-3&keywords=laptop",
-    "features": [
-      {
-        "description": "Display Size",
-        "value": "15.6 inches"
-      },
-      {
-        "description": "Computer Memory Size",
-        "value": "4 GB"
-      },
-      {
-        "description": "Operating System",
-        "value": "Windows 10"
-      },
-      {
-        "description": "Hard Disk Size",
-        "value": "1000 GB"
-      },
-      {
-        "description": "Cpu Model Family",
-        "value": "core i3"
-      }
-    ],
-    "price": 349.99,
-    "shipping": 3.99
-  },
+
   {
     "key": "B01LD4MGY4",
     "category": "laptop",
@@ -151,43 +127,7 @@
     "price": 699,
     "shipping": 3.99
   },
-  {
-    "key": "B01DBGVB7K",
-    "category": "laptop",
-    "name": "ASUS Chromebook C202SA-YS02 11.6\" Ruggedized and Water Resistant Design with 180 Degree (Intel Celeron 4 GB, 16GB eMMC, Dark Blue)",
-    "seller": "Asus",
-    "wholePrice": 220,
-    "priceFraction": 49,
-    "stock": 54,
-    "star": 4.5,
-    "starCount": 2777,
-    "img": "https://images-na.ssl-images-amazon.com/images/I/31inMpRxCFL._AC_US218_.jpg",
-    "url": "https://www.amazon.com/Chromebook-C202SA-YS02-Ruggedized-Resistant-Celeron/dp/B01DBGVB7K/ref=sr_1_6?s=electronics&ie=UTF8&qid=1499124890&sr=1-6&keywords=laptop",
-    "features": [
-      {
-        "description": "Display Size",
-        "value": "11.6 inches"
-      },
-      {
-        "description": "Computer Memory Size",
-        "value": "4 GB"
-      },
-      {
-        "description": "Operating System",
-        "value": "Chrome"
-      },
-      {
-        "description": "Hard Disk Size",
-        "value": "16 GB"
-      },
-      {
-        "description": "Cpu Model Family",
-        "value": "celeron"
-      }
-    ],
-    "price": 220.49,
-    "shipping": 3.99
-  },
+
   {
     "key": "B015WXL0C6",
     "category": "laptop",
