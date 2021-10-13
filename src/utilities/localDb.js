@@ -7,6 +7,7 @@ export const addToDb = (id) => {
     }
     else {
         shoppingCart = JSON.parse(data)
+        // if(id in shoppigCart).    ..we can also check this condition like this for object...
         if (shoppingCart[id]) {
             shoppingCart[id] = shoppingCart[id] + 1;
         }

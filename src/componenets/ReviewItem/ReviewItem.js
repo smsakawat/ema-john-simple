@@ -5,7 +5,7 @@ const ReviewItem = (props) => {
     return (
         <div className='single-product'>
             <div>
-                <h3 className='product-name'>{name}</h3>
+                <h5 className='product-name'>{name}</h5>
                 <p className='product-price'>${price}</p>
                 <small>Sold by:{seller}</small>
                 <h4>Quantity: {quantity}</h4>

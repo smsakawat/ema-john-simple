@@ -15,7 +15,7 @@ const Showcase = () => {
 
     //  load fake data from 
     useEffect(() => {
-        fetch('./products.JSON')
+        fetch('./products.json')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -24,7 +24,7 @@ const Showcase = () => {
 
     }, []);
 
-    // State for update Cart
+    // State for update Cart...I cal also use custom hooks here but here we will do it manually
     const [cart, setCart] = useState([]);
 
     // load data from local storage
@@ -51,14 +51,17 @@ const Showcase = () => {
         }
     }, [products])
 
+
+
+
     // Event handler for Cart
     const handleAddToCart = (product) => {
         const exists = cart.find(pd => pd.key === product.key);
         let newCart = [];
         if (exists) {
             const restProducts = cart.filter(pd => pd.key !== product.key);
-            exists.quantity = exists.quanity + 1;
-            newCart = [...restProducts, product];
+            exists.quantity = exists.quantity + 1;
+            newCart = [...restProducts, exists];
         }
         else {
             product.quantity = 1;
@@ -66,6 +69,7 @@ const Showcase = () => {
         }
 
         setCart(newCart);
+        // save to local for now...
         addToDb(product.key);
 
 
@@ -93,6 +97,7 @@ const Showcase = () => {
         <div>
             <div className='search-bar'>
                 <input
+                    className='form-control'
                     onChange={handleSearch}
                     type=" text" placeholder='search products' />
 
@@ -128,3 +133,4 @@ export default Showcase;
 
 // https://docs.google.com/document/d/1EBlS2g_QLrozKWN8fhYSjN9N1k0zYE5K-7zNZvDUAoQ/preview?pru=AAABfGWY61Y*D2bWzudjtsKoGmhUF8QOlg
 // https://thirsty-murdock-bba58f.netlify.app/details/133753
+

@@ -1,0 +1,8 @@
+.register-container {
+  width: 100vw;
+  height: 570px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

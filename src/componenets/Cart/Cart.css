@@ -1,21 +1,18 @@
-.cart {
-  width: 240px;
-  height: 260px;
+.shopping-cart {
+  width: 250px;
+  height: 280px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  margin-top: 10px;
   margin-left: 30px;
-  padding-left: 15px;
-  padding-top: 5px;
   position: fixed;
 }
-.cart-title {
+/* .shoppingcart-title {
   text-align: center;
-}
+} */
 .icon {
   margin-right: 4px;
 }
-.table {
+.cart-table {
   text-align: start;
   font-size: 14px;
 }
@@ -25,7 +22,7 @@
   color: brown;
   margin-top: 25px;
 }
-.cart td {
+.shopping-cart td {
   padding-right: 10px;
 }
 .review-btn {

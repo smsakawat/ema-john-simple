@@ -14,10 +14,10 @@ const Product = (props) => {
 
 
     return (
-        <div className='single-product'>
+        <div className='single-product mt-3'>
             <img src={img} alt="" className='product-img' />
             <div>
-                <h3 className='product-name'>{name}</h3>
+                <h5 className='product-name'>{name}</h5>
                 <p><small>by:{seller}</small></p>
                 <p>${price}</p>
                 <p><small>only {stock} left in stock-order soon</small></p>
