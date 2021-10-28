@@ -23,7 +23,9 @@ const Showcase = () => {
   useEffect(() => {
     //   setting spinner on every time user clicking on page and it'll on till the data loading from db
     setShowSpinner(true);
-    fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
+    fetch(
+      `https://secure-hamlet-67389.herokuapp.com/products?page=${page}&&size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setShowSpinner(false);
@@ -44,7 +46,7 @@ const Showcase = () => {
     const storedData = getStoredData();
     const keys = Object.keys(storedData);
     //    loading data from server based on keys saved in local db
-    fetch("http://localhost:5000/products/bykeys", {
+    fetch("https://secure-hamlet-67389.herokuapp.com/products/bykeys", {
       method: "POST",
       headers: {
         "content-type": "application/json",

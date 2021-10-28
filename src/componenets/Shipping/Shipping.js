@@ -14,7 +14,7 @@ const Shipping = () => {
   const onSubmit = (data) => {
     const storedData = getStoredData();
     data.order = storedData;
-    fetch("http://localhost:5000/orders", {
+    fetch("https://secure-hamlet-67389.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
