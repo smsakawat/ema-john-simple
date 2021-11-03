@@ -5,7 +5,6 @@ import logo from "../../images/logo.png";
 import "./Header.css";
 
 const Header = () => {
-  
   const { user, logOut } = useAuth();
 
   return (
@@ -17,15 +16,24 @@ const Header = () => {
         <NavLink className="link" to="/shop">
           Shop
         </NavLink>
-        <NavLink className="link" to="order-review">
+        <NavLink className="link" to="/order-review">
           Order Review
         </NavLink>
-        <NavLink className="link" to="inventory">
+        <NavLink className="link" to="/inventory">
           Manage Inventory
         </NavLink>
-        {user.email&&<span className='text-light mx-1'>{user.displayName}</span>}
+        {user.email && (
+          <>
+            <NavLink className="link" to="/orders">
+              Orders
+            </NavLink>
+            <span className="text-light mx-1">{user.displayName}</span>
+          </>
+        )}
         {user.email ? (
-        <button className="btn btn-secondary btn-sm" onClick={logOut}>Log Out</button>
+          <button className="btn btn-secondary btn-sm" onClick={logOut}>
+            Log Out
+          </button>
         ) : (
           <NavLink className="link" to="login">
             Login

@@ -1,9 +1,10 @@
 import {
   getAuth,
+  getIdToken,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
-  signOut
+  signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firabase/firebase.iinit";
@@ -21,31 +22,35 @@ const useFirebase = () => {
     //   setUser(result.user)
     // })
     return signInWithPopup(auth, googleProvider);
-      
   };
 
   const logOut = () => {
-    signOut(auth)
-    .then(() => {
-      
+    signOut(auth).then(() => {
       setUser({});
     });
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    // i have to clear this topic must
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
+        // get jwt token and set it to localstorage
+        getIdToken(user).then((idToken) =>
+          localStorage.setItem("idToken", idToken)
+        );
         setUser(user);
+      } else {
+        setUser({});
       }
-     
     });
+    return () => unsubscribe;
   }, []);
 
   return {
     user,
     error,
     signInUsingGoogle,
-    logOut
+    logOut,
   };
 };
 

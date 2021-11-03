@@ -11,9 +11,11 @@ const Shipping = () => {
     reset,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     const storedData = getStoredData();
     data.order = storedData;
+    data.orderTime = new Date();
     fetch("https://secure-hamlet-67389.herokuapp.com/orders", {
       method: "POST",
       headers: {
@@ -39,18 +41,18 @@ const Shipping = () => {
           <input
             className="form-control"
             defaultValue={user.displayName}
-            {...register("Full-Name")}
+            {...register("name")}
           />
           <input
             className="form-control"
             defaultValue={user.email}
-            {...register("Email")}
+            {...register("email")}
           />
           <input
             className="form-control"
             type="number"
             placeholder="Phone Number"
-            {...register("Phone", { required: true })}
+            {...register("phone", { required: true })}
           />
           {errors.Password && (
             <span className="text-danger ms-3">This field is required</span>
@@ -58,12 +60,12 @@ const Shipping = () => {
           <input
             className="form-control"
             placeholder="Adress"
-            {...register("Adress")}
+            {...register("adress")}
           />
           <input
             className="form-control"
             placeholder="City"
-            {...register("City")}
+            {...register("city")}
           />
           <input className="form-control form-btn" type="submit" />
         </div>
