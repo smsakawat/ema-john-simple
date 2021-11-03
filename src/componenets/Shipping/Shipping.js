@@ -67,7 +67,11 @@ const Shipping = () => {
             placeholder="City"
             {...register("city")}
           />
-          <input className="form-control form-btn" type="submit" />
+          <input
+            className="form-control form-btn"
+            type="submit"
+            value="SUBMIT"
+          />
         </div>
       </form>
     </div>
