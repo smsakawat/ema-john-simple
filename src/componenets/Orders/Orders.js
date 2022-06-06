@@ -6,7 +6,6 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useAuth();
   const history = useHistory();
-  console.log(orders);
 
   useEffect(() => {
     fetch(`http://localhost:5000/orders?email=${user.email}`)
@@ -20,14 +19,17 @@ const Orders = () => {
       })
       .then((data) => {
         setOrders(data);
-      });
-  }, [user.email, history]);
+        console.log(orders);
+      })
+      .catch("something wrong happened");
+  }, [user.email, history, orders]);
   return (
     <>
       <div>Total Orders: {orders?.length}</div>
       {orders?.map((order) => (
         <div key={order._id}>
           <p>Orderer email: {order.email}</p>
+          <p>{order.name}</p>
         </div>
       ))}
     </>

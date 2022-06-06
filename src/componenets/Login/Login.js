@@ -13,9 +13,11 @@ const Login = () => {
   // location.state?.from ||
 
   const handleGoogleLogin = () => {
-    signInUsingGoogle().then((result) => {
-      history.push(redirect_uri);
-    });
+    signInUsingGoogle()
+      .then((result) => {
+        history.push(redirect_uri);
+      })
+      .catch(alert("Something went wrong"));
   };
 
   return (
