@@ -5,19 +5,19 @@ import useAuth from "../../hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-  const {signInUsingGoogle} = useAuth();
+  const { signInUsingGoogle } = useAuth();
   const location = useLocation();
-  const history = useHistory()
+  const history = useHistory();
   // console.log('came-from',location.state?.from.pathname)
-  const redirect_uri = location.state?.from || '/';
+  const redirect_uri = "/";
+  // location.state?.from ||
 
-  const handleGoogleLogin=()=>{
-    signInUsingGoogle()
-    .then(result=>{
+  const handleGoogleLogin = () => {
+    signInUsingGoogle().then((result) => {
       history.push(redirect_uri);
-    })
-  }
-  
+    });
+  };
+
   return (
     <div className="login-container p-5">
       <div className="form-container p-4">

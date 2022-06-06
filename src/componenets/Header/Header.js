@@ -31,7 +31,7 @@ const Header = () => {
           </>
         )}
         {user.email ? (
-          <button className="btn btn-secondary btn-sm" onClick={logOut}>
+          <button className="btn btn-secondary btn-sm mb-1" onClick={logOut}>
             Log Out
           </button>
         ) : (
